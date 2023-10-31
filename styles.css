@@ -1,0 +1,89 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Light Theme Styles */
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #333333; /* Dark gray color for text */
+  background-color: #f8f8f8; /* Light background */
+  line-height: 1.6;
+}
+
+header,
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  display: flex;
+  width: 80%; /* Sets the width of the main content to 80% of the viewport */
+  max-width: 850px; /* Ensures the width does not exceed 850px */
+  margin: 0 auto; /* Centers the main content within the viewport */
+  justify-content: space-around; /* Evenly spaces the items */
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  margin-bottom: 0;
+}
+
+a {
+  color: #7b68ee; /* Purple color for links */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 2rem;
+  width: 80%; /* Sets the width of the main content to 80% of the viewport */
+  max-width: 850px; /* Ensures the width does not exceed 850px */
+  margin: 0 auto; /* Centers the main content within the viewport */
+  background-color: #ffffff; /* White background for main content */
+  box-shadow: 0 0 20px #9e8ff39c; /* Optional: adds a subtle shadow around the main content */
+  border-radius: 20px;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+  color: #7b68ee; /* Purple color for headings */
+}
+
+.about-paragraph {
+  margin-bottom: 20px; /* Adjust the value as per your preference */
+}
+
+.responsive-image {
+  max-width: 30%;
+  height: auto;
+  align-self: center; /* This prevents the image from stretching */
+  box-shadow: 0 0 20px #9e8ff39c; /* Optional: adds a subtle shadow around the main content */
+
+}
+
+.about {
+  align-items: stretch; /* Items will stretch by default */
+  display: flex;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  main {
+    padding: 2rem;
+  }
+  .responsive-image {
+    display: none;
+    
+  }
+}
