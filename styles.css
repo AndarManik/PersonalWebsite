@@ -69,7 +69,7 @@ h2 {
   height: auto;
   align-self: center; /* This prevents the image from stretching */
   box-shadow: 0 0 20px #9e8ff39c; /* Optional: adds a subtle shadow around the main content */
-
+  border-radius: 20px;
 }
 
 .about {
