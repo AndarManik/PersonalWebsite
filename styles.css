@@ -7,7 +7,7 @@
 
 /* Light Theme Styles */
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: 'Arial', sans-serif; /* Changed to a more modern font */
   color: #333333; /* Dark gray color for text */
   background-color: #f8f8f8; /* Light background */
   line-height: 1.6;
@@ -18,10 +18,11 @@ footer {
   text-align: center;
   padding: 1rem 0;
   display: flex;
-  width: 80%; /* Sets the width of the main content to 80% of the viewport */
-  max-width: 850px; /* Ensures the width does not exceed 850px */
-  margin: 0 auto; /* Centers the main content within the viewport */
-  justify-content: space-around; /* Evenly spaces the items */
+  flex-direction: column; /* Changed to column for better structure */
+  align-items: center; /* Aligns items to the center */
+  width: 80%;
+  max-width: 850px;
+  margin: 0 auto;
 }
 
 header h1 {
@@ -43,12 +44,12 @@ a:hover {
 
 main {
   padding: 2rem;
-  width: 80%; /* Sets the width of the main content to 80% of the viewport */
-  max-width: 850px; /* Ensures the width does not exceed 850px */
-  margin: 0 auto; /* Centers the main content within the viewport */
-  background-color: #ffffff; /* White background for main content */
-  box-shadow: 0 0 20px #9e8ff39c; /* Optional: adds a subtle shadow around the main content */
-  border-radius: 20px;
+  width: 80%;
+  max-width: 850px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 section {
@@ -56,34 +57,40 @@ section {
 }
 
 h2 {
-  margin-bottom: 0.5rem;
-  color: #7b68ee; /* Purple color for headings */
+  margin-bottom: 1rem;
+  color: #7b68ee;
 }
 
-.about-paragraph {
-  margin-bottom: 20px; /* Adjust the value as per your preference */
+.about p {
+  margin-bottom: 1rem; /* Adds spacing between paragraphs */
+  text-align: justify; /* Justifies the text for better readability */
 }
 
 .responsive-image {
-  max-width: 30%;
+  max-width: 150px; /* Adjusted size for better layout */
   height: auto;
-  align-self: center; /* This prevents the image from stretching */
-  box-shadow: 0 0 20px #9e8ff39c; /* Optional: adds a subtle shadow around the main content */
-  border-radius: 20px;
-}
-
-.about {
-  align-items: stretch; /* Items will stretch by default */
-  display: flex;
+  border-radius: 50%; /* Makes the image circular */
+  margin-bottom: 1rem; /* Adds spacing below the image */
 }
 
 /* Responsive Design */
-@media (max-width: 500px) {
-  main {
-    padding: 2rem;
+@media (max-width: 768px) {
+  header, main {
+    width: 95%;
   }
+
+  .about {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .responsive-image {
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 500px) {
   .responsive-image {
     display: none;
-    
   }
 }
